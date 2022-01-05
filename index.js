@@ -1,5 +1,15 @@
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  const arrayString = word.split('')
+  const reverseArray = arrayString.reverse()
+  const reverseString = reverseArray.join('')
+
+  if(word === reverseString){
+    return true
+  }
+  else{
+    return false
+  }
 }
 
 /* 
@@ -12,7 +22,11 @@ function isPalindrome(word) {
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+  isPalindrome("abba")
+  isPalindrome("racecar")
+  isPalindrome("a")
+  isPalindrome("robot")
+  isPalindrome("ab")
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
